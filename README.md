@@ -14,14 +14,16 @@ Summary: Basic infrastructure and some algorithms for the traveling salesperson 
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-tsp-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-tsp-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-tsp-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-tsp-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-tsp-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-tsp-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-tsp-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-tsp-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-tsp-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-tsp-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-tsp-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-tsp-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-tsp/badges/version.svg)](https://anaconda.org/conda-forge/r-tsp)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-tsp/badges/downloads.svg)](https://anaconda.org/conda-forge/r-tsp)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--tsp-green.svg)](https://anaconda.org/conda-forge/r-tsp) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-tsp.svg)](https://anaconda.org/conda-forge/r-tsp) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-tsp.svg)](https://anaconda.org/conda-forge/r-tsp) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-tsp.svg)](https://anaconda.org/conda-forge/r-tsp) |
 
 Installing r-tsp
 ================
