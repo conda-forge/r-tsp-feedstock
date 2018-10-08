@@ -1,5 +1,4 @@
-{% set version = '1.1-5' %}
-
+{% set version = '1.1-6' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,40 +9,42 @@ package:
 source:
   fn: TSP_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/TSP_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/TSP/TSP_{{ version }}.tar.gz
-
-  sha256: 5cf865eb70bd09dbf7869f23b252850c36701bb3fc061cd6fdf093394b76bd0f
+    - {{ cran_mirror }}/src/contrib/TSP_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/TSP/TSP_{{ version }}.tar.gz
+  sha256: 8cc2793995cf475ae0d9a15c48c059cb009ec48b1c4416f37457b228683fa9fa
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - posix                # [win]
-    - {{ compiler('c') }}        # [unix]
-    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('c') }}        # [not win]
+    - {{native}}toolchain        # [win]
+    - {{posix}}filesystem        # [win]
+    - {{posix}}make
+    - {{posix}}sed               # [win]
+    - {{posix}}coreutils         # [win]
+    - {{posix}}zip               # [win]
   host:
     - r-base
     - r-foreach
-
   run:
     - r-base
+    - {{native}}gcc-libs         # [win]
     - r-foreach
 
 test:
   commands:
-    - $R -e "library('TSP')"  # [not win]
+    - $R -e "library('TSP')"           # [not win]
     - "\"%R%\" -e \"library('TSP')\""  # [win]
 
 about:
-  home: https://cran.r-project.org/web/packages/TSP/index.html
+  home: http://lyle.smu.edu/IDA/seriation
   license: GPL-3
   summary: Basic infrastructure and some algorithms for the traveling salesperson problem (also
     traveling salesman problem; TSP). The package provides some simple algorithms and
@@ -53,8 +54,9 @@ about:
   license_family: GPL3
   license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
   license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+
 extra:
-   recipe-maintainers:
+  recipe-maintainers:
     - MathiasHaudgaard
     - FrodePedersen
     - ArneKr
@@ -62,3 +64,5 @@ extra:
     - bgruening
     - daler
     - jdblischak
+    - cbrueffer
+    - dbast
