@@ -1,4 +1,4 @@
-{% set version = "1.1-9" %}
+{% set version = "1.1-10" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/TSP_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/TSP/TSP_{{ version }}.tar.gz
-  sha256: c7b31043785acfdf64049d62e6e0824abf05874d051824293d6137b0323375a0
+  sha256: 44979f16803806419a94a6b0daeac812f4e7bd52d2fff11561fd4bbc41353b7c
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -44,13 +44,11 @@ test:
 about:
   home: https://github.com/mhahsler/TSP
   license: GPL-3
-  summary: Basic infrastructure and some algorithms for the traveling salesperson problem (also
-    traveling salesman problem; TSP). The package provides some simple algorithms and
-    an interface to the Concorde TSP solver and its implementation of the Chained-Lin-Kernighan
-    heuristic. The code for Concorde itself is not included in the package and has to
-    be obtained separately.
+  summary: Basic infrastructure and some algorithms for the traveling salesperson problem (also traveling salesman problem; TSP). The package provides some simple
+    algorithms and an interface to the Concorde TSP solver and its implementation of the Chained-Lin-Kernighan heuristic. The code for Concorde itself is not included
+    in the package and has to be obtained separately.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
