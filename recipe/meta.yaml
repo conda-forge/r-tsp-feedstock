@@ -1,4 +1,4 @@
-{% set version = "1.2-0" %}
+{% set version = "1.2-1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/TSP_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/TSP/TSP_{{ version }}.tar.gz
-  sha256: 2a7eee07197d01e3637fbb35beefbcd5211759a20974880d07abb3294e025308
+  sha256: 2bb5febff3b0bccc5ab4b85f509b841a48a8a1f136ca2feff251c08cc9ba46dd
 
 build:
   merge_build_host: true  # [win]
