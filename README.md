@@ -1,11 +1,22 @@
+About r-tsp-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tsp-feedstock/blob/main/LICENSE.txt)
+
 About r-tsp
-===========
+-----------
 
 Home: https://github.com/mhahsler/TSP
 
 Package license: GPL-3.0-only
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tsp-feedstock/blob/main/LICENSE.txt)
+Summary: Basic infrastructure and some algorithms for the traveling salesperson problem (also traveling salesman problem; TSP). The package provides some simple algorithms and an interface to the Concorde TSP solver and its implementation of the Chained-Lin-Kernighan heuristic. The code for Concorde itself is not included in the package and has to be obtained separately.
+About r-tsp
+-----------
+
+Home: https://github.com/mhahsler/TSP
+
+Package license: GPL-3.0-only
 
 Summary: Basic infrastructure and some algorithms for the traveling salesperson problem (also traveling salesman problem; TSP). The package provides some simple algorithms and an interface to the Concorde TSP solver and its implementation of the Chained-Lin-Kernighan heuristic. The code for Concorde itself is not included in the package and has to be obtained separately.
 
