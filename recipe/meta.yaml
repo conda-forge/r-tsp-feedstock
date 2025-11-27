@@ -1,4 +1,4 @@
-{% set version = "1.2-5" %}
+{% set version = "1.2.6" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/TSP_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/TSP/TSP_{{ version }}.tar.gz
-  sha256: ab51ca1514d16ad488592918227f3333e9b0e7969f6d7757446b0d92f6aa4c20
+  sha256: 6d1d7a1eae6e7bd4abfbdd56d4fe4bc2cbe6d31de328778087d6fd45ef140f95
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
